@@ -5,11 +5,11 @@
  * Time: 22:21
  */
 var colors = require('colors');
-var progress = require('progress');
+var Progress = require('progress');
 var ansi = require('ansi');
 
 var cursor = ansi(process.stdout);
-var bar = new progress(':bar', {total: 10});
+var bar = new Progress(':bar', {total: 10});
 var timer = setInterval(function () {
     bar.tick();
     if (bar.complete) {
